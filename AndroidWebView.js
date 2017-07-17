@@ -232,6 +232,12 @@ class AndroidWebView extends Component {
     ]),
 
     /**
+     * Boolean value to enable third party cookies in the WebView. Used on Android Lollipop and above only as third
+     * party cookies are enabled by default on Android Kitkat and below and on iOS. The default value is true.
+     */
+    thirdPartyCookiesEnabled: PropTypes.bool,
+
+    /**
      * Used on Android only, controls whether form autocomplete data should be saved
      * @platform android
      */
@@ -420,6 +426,7 @@ class AndroidWebView extends Component {
         mediaPlaybackRequiresUserAction={this.props.mediaPlaybackRequiresUserAction}
         allowUniversalAccessFromFileURLs={this.props.allowUniversalAccessFromFileURLs}
         mixedContentMode={this.props.mixedContentMode}
+        thirdPartyCookiesEnabled={this.props.thirdPartyCookiesEnabled}
         saveFormDataDisabled={this.props.saveFormDataDisabled}
         uploadEnabledAndroid={true}
       />
