@@ -427,6 +427,7 @@ class AndroidWebView extends Component {
         mixedContentMode={this.props.mixedContentMode}
         thirdPartyCookiesEnabled={this.props.thirdPartyCookiesEnabled}
         saveFormDataDisabled={this.props.saveFormDataDisabled}
+        urlPrefixesForDefaultIntent={this.props.urlPrefixesForDefaultIntent}
         uploadEnabledAndroid={true}
       />
     );
