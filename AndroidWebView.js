@@ -18,6 +18,7 @@ import ReactNative, {
   UIManager,
   View,
   requireNativeComponent,
+  ViewPropTypes,
 } from 'react-native';
 import warning from 'warning';
 import keyMirror from 'keymirror';
@@ -93,7 +94,7 @@ const defaultRenderLoading = () => (
  */
 class AndroidWebView extends Component {
   static propTypes = {
-    ...View.propTypes,
+    ...ViewPropTypes,
     renderError: PropTypes.func,
     renderLoading: PropTypes.func,
     onLoad: PropTypes.func,
@@ -107,7 +108,7 @@ class AndroidWebView extends Component {
     onContentSizeChange: PropTypes.func,
     urlPrefixesForDefaultIntent: PropTypes.arrayOf(PropTypes.string),
     startInLoadingState: PropTypes.bool, // force WebView to show loadingView on first load
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
 
     html: deprecatedPropType(
       PropTypes.string,
